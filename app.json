@@ -5,13 +5,13 @@
   "keywords": [
     "telegram"
   ],
-  "repository": "https://github.com/thereisnothinginhere/Heroku-Test",
-  "success_url": "https://github.com/thereisnothinginhere/Heroku-Test",
+  "repository": "https://github.com/GopalSaraf/TorrentLeechBot",
+  "success_url": "https://t.me/torrentgs",
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
       "value": "ANYTHING"
-    },
+    }
   },
   "stack": "container"
 }
