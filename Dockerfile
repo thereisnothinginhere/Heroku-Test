@@ -8,4 +8,6 @@ WORKDIR /app
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Kolkata
 
-RUN echo "HI"
+RUN echo Updating...
+RUN apt update
+RUN echo updated
