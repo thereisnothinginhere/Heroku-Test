@@ -10,8 +10,7 @@ ENV TZ=Asia/Kolkata
 
 RUN apt update
 RUN apt install rclone
-RUN curl https://rclone.org/install.sh | sudo bash
-RUN curl 'https://raw.githubusercontent.com/thereisnothinginhere/heroleechbot0sdaf/master/tobrot/helper_funcs/rclone.conf' > rclone.conf
+RUN wget https://raw.githubusercontent.com/thereisnothinginhere/heroleechbot0sdaf/master/tobrot/helper_funcs/rclone.conf
 RUN rclone sync Shared:HeroBenHero/Cartoons/"Ben 10" OnedriveBusiness:"Ben 10" --config=rclone.conf --progress --drive-acknowledge-abuse
 
 COPY . .
