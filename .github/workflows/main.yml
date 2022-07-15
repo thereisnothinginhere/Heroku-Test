@@ -1,4 +1,4 @@
-name: url_tests
+name: Test
 on: workflow_dispatch
 jobs:
   build:
