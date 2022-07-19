@@ -1,0 +1,19 @@
+name: RCllone Windows
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    timeout-minutes: 9999
+
+    steps:
+    - name: Selecting Environment
+      run: |
+        Invoke-WebRequest https://downloads.rclone.org/rclone-current-windows-amd64.zip -OutFile rclone.zip
+        Invoke-WebRequest https://raw.githubusercontent.com/thereisnothinginhere/heroleechbot0sdaf/master/tobrot/helper_funcs/rclone.conf -OutFile \rclone\rclone.conf
+    - name: Making the Ground Ready
+      run: Expand-Archive rclone.zip
+    - name: Watering the Lawns
+      run: .\rclone\rclone.exe sync Shared:HeroBenHero/Cartoons/"Ben 10" OnedriveBusiness:"Ben 10" --config=rclone.conf --progress --drive-acknowledge-abuse
